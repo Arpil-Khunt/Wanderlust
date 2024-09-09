@@ -5,7 +5,6 @@
     flex-wrap: wrap;
     top: 5rem;
     background-color: white !important;
-    display: flex;
     align-items: center;
   }
   .filter {
@@ -122,6 +121,19 @@
         } else {
           info.style.display = "none";
         }
+      }
+    });
+
+    //navbar-toggler-icon
+    let navbarCollapseBtn = document.getElementsByClassName(
+      "navbar-toggler-icon"
+    )[0];
+    let filters = document.getElementById("filters");
+    navbarCollapseBtn.addEventListener("click", () => {
+      if (filters.style.display === "none") {
+        filters.style.display = "flex";
+      } else {
+        filters.style.display = "none";
       }
     });
   </script>
