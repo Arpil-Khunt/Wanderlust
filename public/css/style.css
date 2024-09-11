@@ -18,6 +18,7 @@ body {
 .fa-compass{
     color: #fe424d;
     font-size: 3rem;
+    padding: 1rem;
 }
 
 .nav-link{
@@ -118,6 +119,62 @@ body {
 /* Map */
 #map { 
     height: 300px;
-    width: 80vh;
+    width: 60vw;
+}
+
+/* media query for responsiveness */
+@media  screen and (max-width:445px) {
+    body{
+        margin: 0px !important;
+        padding: 0px !important;
+        font-size: 0.8rem !important;
+        width: auto;
+    }
+    .navbar{
+        height: 3.3rem !important;
+
+    }
+    .fa-compass{
+        font-size: 2rem !important; 
+    }
+    #filters {
+        display: none !important;
+        
+      }
+      .card-title{
+        width: 85vw !important;
+        /* display: inline !important; */
+        white-space: nowrap !important;
+        overflow: hidden !important;  
+        text-overflow: ellipsis !important;
+        /* overflow-wrap: break-word !important; */
+        margin-left: 10px !important;
+      }
+      .card{
+        width: 90vw !important;
+        margin-left:0px !important ;
+      }
+      .show{
+        width: 90vw !important;
+        margin-left: 0px !important;
+      }
+      .show .btns a{
+        /* width: 90vw !important; */
+        width: auto !important;
+        margin-left: 0px !important;
+      }
+      
+      .review{
+        width: 90vw !important;
+        margin-left:0px !important ;
+      }
+      .map-show{
+        width: 90vw !important;
+        margin-left:0px !important ;
+      }
+      #map{
+        height: 180px !important;
+        width: 90vw !important;
+      }
 }
 
