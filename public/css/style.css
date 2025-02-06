@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 .container{
@@ -130,10 +131,10 @@ body {
         font-size: 0.8rem !important;
         width: auto;
     }
-    .navbar{
+    /* .navbar{
         height: 3.3rem !important;
 
-    }
+    } */
     .fa-compass{
         font-size: 2rem !important; 
     }

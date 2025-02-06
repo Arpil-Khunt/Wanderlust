@@ -1,8 +1,34 @@
 <% layout("./layouts/boilerplate") -%>
-
-<div class="row mt-3">
-  <h1 class="offset-3">SignUp on wanderlust</h1>
-  <div class="col-6 offset-3">
+<style>
+  body {
+    background-color: #f4f4f4;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+  .signup h1 {
+    text-align: center;
+    color: #fa434e;
+  }
+  .signup {
+    background-color: #fff;
+    width: fit-content;
+    padding: 30px 0px;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+  }
+  .data {
+    padding-top: 13px;
+  }
+</style>
+<div class="row mt-3 signup">
+  <h1>SignUp on wanderlust</h1>
+  <div class="col-6 data">
     <form method="POST" action="/signup" class="needs-validation" novalidate>
       <div class="mb-3">
         <label class="form-label" for="username">Username :</label>
@@ -38,6 +64,13 @@
         <div class="invalid-feedback">enter valid password!</div>
       </div>
       <button class="btn btn-success mb-3">SignUp</button>
+      <p style="text-align: center">
+        Already have an account?&nbsp;&nbsp;<a
+          href="/login"
+          style="text-decoration: none; color: #fa434e; font-weight: 600"
+          >Login</a
+        >
+      </p>
     </form>
   </div>
 </div>

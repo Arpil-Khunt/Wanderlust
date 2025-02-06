@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlust</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm306.7 69.1L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z' fill='red'/></svg>"
+      type="image/svg+xml"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(
+          135deg,
+          #f5f7fa,
+          #c3cfe2
+        ); /* Subtle background gradient */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        color: #333; /* Dark text for contrast */
+      }
+
+      .container {
+        background-color: white;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 600px; /* Adjust as needed */
+        width: 90%;
+      }
+
+      .header {
+        position: relative; /* For positioning circles */
+      }
+
+      h1 {
+        color: #e2725b; /* Exact color from the image */
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+
+      .button-container {
+        margin-bottom: 20px; /* Space below the button */
+      }
+
+      button {
+        background: linear-gradient(
+          to right,
+          #fc816c,
+          #e2725b
+        ); /* Gradient button */
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background: linear-gradient(to right, #ec6149, #d1624a);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .circle {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #f0c808; /* Yellow circles */
+        opacity: 0.7; /* Slightly transparent */
+        z-index: -1; /* Behind the content */
+      }
+
+      .circle-top-left {
+        top: -20px;
+        left: -20px;
+      }
+
+      .circle-top-right {
+        top: -20px;
+        right: -20px;
+      }
+
+      .circle-bottom {
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+      }
+
+      @media (max-width: 391px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        .container {
+          padding: 8px;
+        }
+      }
+      /* Media Queries for Responsiveness */
+
+      @media (min-width: 392px) and (max-width: 576px) {
+        /* Small screens (e.g., mobile) */
+        h1 {
+          font-size: 1.8em;
+        }
+        .container {
+          padding: 20px;
+        }
+      }
+
+      @media (min-width: 577px) and (max-width: 768px) {
+        /* Medium screens (e.g., tablets) */
+        h1 {
+          font-size: 2em;
+        }
+        .container {
+          padding: 25px;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 992px) {
+        /* Large screens (e.g., laptops) */
+        .container {
+          padding: 30px;
+        }
+      }
+      @media (min-width: 993px) {
+        /* Extra-large screens (e.g., desktops) */
+        .container {
+          padding: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="circle circle-top-left"></div>
+        <div class="circle circle-top-right"></div>
+        <h1>Welcome to Wanderlust!</h1>
+        <p>
+          Explore our amazing listings and reviews. We're here to help you
+          discover the best places to visit!
+        </p>
+        <div class="button-container">
+          <button class="myButton">View Listings</button>
+        </div>
+        <div class="circle circle-bottom"></div>
+      </div>
+    </div>
+    <script>
+      let myButton = document.querySelector(".myButton");
+      myButton.addEventListener("click", () => {
+        window.location.href = "/listings";
+      });
+    </script>
+  </body>
+</html>
